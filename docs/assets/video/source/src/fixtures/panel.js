@@ -1,6 +1,6 @@
 // Admin panel fixtures (web/src/views/panel/*). Everything is fictional demo data except
 // mcp-manifest.json, which is the real manifest dumped from internal/mcp (Registry.Manifest()
-// with Adapter.RegisterAll) via a throwaway `go test -overlay` — see docs/design/video/README.md.
+// with Adapter.RegisterAll) via a throwaway `go test -overlay` — see docs/assets/video/README.md.
 import MCP_MANIFEST from './mcp-manifest.json';
 
 const ok = data => ({code: 1, msg: '', data});

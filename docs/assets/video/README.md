@@ -1,12 +1,14 @@
 # Ech0 品牌宣传片
 
+> 素材产线，不是文档。文档索引见 [`docs/README.md`](../../README.md)。
+
 [`ech0-promo.mp4`](ech0-promo.mp4)：1920×1080 · 30fps · 97.5 秒 · 英文 · H.264 + AAC，响度约 -17 LUFS，真峰值 -1.65 dBTP。
 
 - **范围**：当前产品（v5.7.0）的整体介绍，用于营销，不是更新日志。
 - **平台面**：Web 桌面端，包括公开站点和管理后台。TUI/CLI、移动端/PWA、外部 MCP 客户端的实际调用没有出现在片中。
 - **风格**：沿用产品自己的设计（暖纸色、焦橙强调色、Iowan Old Style 展示字体），全程 light 主题。
 
-![联系表](preview/contact-sheet.png)
+![联系表](source/evidence/contact-sheet.png)
 
 ## 故事线
 
@@ -32,7 +34,7 @@
 ```
 video/
 ├── ech0-promo.mp4        成片
-├── preview/              联系表（1fps）和 15 张关键帧
+├── preview/              15 张关键帧（联系表 1fps 见 source/evidence/）
 └── source/               可复现工程
     ├── DIRECTION.md      方向、专属手法、画面规范、镜头表
     ├── BRIEF.md          范围与用户决定
@@ -58,7 +60,7 @@ video/
 需要 Node ≥ 22、FFmpeg、Python 3（带 numpy、scipy），以及安装好依赖的 `web/node_modules`。另外要有上述 skill，因为混音和交付检查脚本在里面。
 
 ```sh
-cd docs/design/video/source
+cd docs/assets/video/source
 npm ci
 npx playwright install chromium --only-shell   # 或者用 FILM_CHROMIUM=<chrome-headless-shell 路径> 指定本机已有的浏览器
 python3 tools/score.py assets/music.wav        # 重新合成配乐
